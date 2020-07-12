@@ -7,5 +7,5 @@ function calc() {
 }
 
 $("button").click(function (){
-    $(this).append('<div><span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span></div>');
+    $(this).after('<h1>Ansewr</h1>');
 });
