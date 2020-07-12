@@ -5,3 +5,7 @@ function edit(elem) {
 function calc() {
   result.value = new Function("return " + result.value)();
 }
+
+$("button").click(function (){
+    $(this).prepend('<span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>');
+});
