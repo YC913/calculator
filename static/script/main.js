@@ -7,5 +7,5 @@ function calc() {
 }
 
 $("button").click(function (){
-    $(this).prepend('<span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>');
+    $(this).append('<div><span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span></div>');
 });
