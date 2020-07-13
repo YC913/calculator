@@ -3,7 +3,7 @@ function clc(formula){
     return new Function("return " + formula.value)()
 }
 
-// 置き換え
+// コンビネーションの置き換え
 var count = 0;
 function rep_comb(text){
     var pattern = /\d{1,}C\d{1,}/;  // コンビネーションの正規表現（例：15C2）
@@ -49,6 +49,9 @@ $("#clc").click(function (){
 
     // 計算式をhtmlに追加
     $("#clc-result").append(formula.value+" = ");
+
+    // 文字の置き換え
+    formula.value = formula.value.replace(/×/,"*").replace(/÷/,"/");
 
     // 計算式を結果に追加
     formula.value = rep_comb(formula.value);
