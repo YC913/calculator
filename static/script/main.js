@@ -57,3 +57,13 @@ $("button").click(function (){
     // フォーム内を初期化
     formula.value = "";
 });
+
+document.getElementById("formula").onkeypress = (e) => {
+    // form1に入力されたキーを取得
+    const key = e.keyCode || e.charCode || 0;
+    // 13はEnterキーのキーコード
+    if (key == 13) {
+      // アクションを行わない
+      e.preventDefault();
+    }
+  }
