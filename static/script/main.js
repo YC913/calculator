@@ -43,7 +43,7 @@ function conbination(m, n){
 }
 
 // ボタンが押されたときに呼び出される関数
-$("button").click(function (){
+$("#clc").click(function (){
     // 初期化
     $("#clc-result").empty();
 
@@ -63,7 +63,7 @@ document.getElementById("formula").onkeypress = (e) => {
     const key = e.keyCode || e.charCode || 0;
     // 13はEnterキーのキーコード
     if (key == 13) {
-      // アクションを行わない
-      e.preventDefault();
+        e.preventDefault(); // アクションの無効化
+        $("#clc").click();  // 計算ボタンをクリック
     }
-  }
+}
